@@ -6,3 +6,7 @@ Esse repositório tem o intuito de versionar o projeto da disciplina desenvolvim
 Igor Lúcio Manta Guedes
 
 Victória De Martini de Souza
+
+Yuri Gabriel Aragão da Silva
+
+Roseval Donisete Malaquias Junior
