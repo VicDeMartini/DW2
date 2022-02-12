@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_endereco_enderecos",
+  "info": {
+    "displayName": "Endereco",
+    "icon": "address-book"
+  },
+  "options": {},
+  "attributes": {
+    "CEP": {
+      "type": "string",
+      "regex": "^\\d{5}-\\d{3}$",
+      "required": true
+    },
+    "Logradouro": {
+      "type": "string"
+    },
+    "Bairro": {
+      "type": "string"
+    },
+    "Numero": {
+      "type": "string"
+    },
+    "Cidade": {
+      "type": "string"
+    },
+    "Estado": {
+      "type": "string"
+    }
+  }
+}

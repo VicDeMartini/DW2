@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "usuarios",
+  "info": {
+    "singularName": "usuario",
+    "pluralName": "usuarios",
+    "displayName": "Usuario",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "pluginOptions": {},
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "pluginOptions": {},
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "senha": {
+      "type": "password",
+      "required": true,
+      "private": true
+    },
+    "cpf": {
+      "type": "string",
+      "regex": "[0-9]{3}\\.?[0-9]{3}\\.?[0-9]{3}\\-?[0-9]{2}",
+      "required": true,
+      "unique": true
+    },
+    "telefone": {
+      "type": "string"
+    },
+    "sexo": {
+      "type": "enumeration",
+      "enum": [
+        "Masculino",
+        "Feminino",
+        "Nao_binario",
+        "Prefiro_nao_informar"
+      ]
+    },
+    "Endereco": {
+      "type": "component",
+      "repeatable": false,
+      "component": "endereco.endereco",
+      "required": true
+    },
+    "isAdmin": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}
