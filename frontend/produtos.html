@@ -9,8 +9,9 @@
         const nome = `<h2>${data.nome}</h2>`;
         const descricao = `<p>Descrição: ${data.descricao}</p>`;
         const preco = `<p>Preço: ${data.preco}</p>`;
+        const separator = `<hr>`;
 
-        const html = nome + descricao + preco;
+        const html = nome + descricao + preco + separator;
         console.log(html);
         return html;
       }
@@ -21,7 +22,7 @@
           })
           .then((data) => {
             data = data.data;
-            console.log(data);
+            
             for (i = 0; i < data.length; i++) {
               document.getElementById("#produtos").innerHTML += buildHtml(
                 data[i].attributes
