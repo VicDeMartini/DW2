@@ -16,7 +16,7 @@
     }
   },
   "attributes": {
-    "Nome": {
+    "nome": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -25,7 +25,7 @@
       "type": "string",
       "required": true
     },
-    "Descricao": {
+    "descricao": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -33,7 +33,7 @@
       },
       "type": "text"
     },
-    "Preco": {
+    "preco": {
       "pluginOptions": {
         "i18n": {
           "localized": false
@@ -44,7 +44,7 @@
       "default": 0,
       "min": 0
     },
-    "Quantidade_em_estoque": {
+    "quantidade_em_estoque": {
       "pluginOptions": {
         "i18n": {
           "localized": false
@@ -55,7 +55,7 @@
       "default": 0,
       "min": 0
     },
-    "Cor": {
+    "cor": {
       "pluginOptions": {
         "i18n": {
           "localized": false
