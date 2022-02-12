@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "compras",
+  "info": {
+    "singularName": "compra",
+    "pluralName": "compras",
+    "displayName": "Compra"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "produtos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::produto.produto"
+    },
+    "usuario": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::usuario.usuario",
+      "inversedBy": "compras"
+    }
+  }
+}
