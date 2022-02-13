@@ -10,12 +10,15 @@
 <body>
     <!-- cabecalho da pagina -->
     <div class="header">  
-        <h1>Informações dos Clientes</h1>
+        <h1><strong> Informações dos Clientes - Nome da Loja </strong></h1>
         <hr>
     </div>
 
     <!-- Link para a pagina que cria cliente -->
     <a href="./CCliente.html">Criar um novo Cliente</a> <br><br>
+
+    <!-- Essa sera a pagina "principal" para cliente (read), servindo de link para o delete, update e create 
+         Alem disso, servira de link para visualizar as compras de um cliente. -->
     <!-- Tabela de clientes -->
     <table border=1>
         <tr> <!-- cabecalho da tabela -->
@@ -47,7 +50,7 @@
             <td> CONTEUDO</td> 
             <td> CONTEUDO</td>
             <!-- Link para a pagina que deleta cliente e atualiza cliente-->     
-            <td> <a href="./DCliente"> Deletar</a> <a href="./UCliente">Atualizar</a></td> 
+            <td> <a href="./DCliente"> Deletar</a> <a href="./UCliente">Atualizar</a> <a href="./Compras">Ver Compras</a> </td> 
         </tr>
     </table>
 </body>
