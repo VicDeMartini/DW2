@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../CSS/main.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>Clientes</title>
+</head>
+
+<body>
+    <!-- cabecalho da pagina -->
+    <nav id="menu">
+        <ul>
+            <li id="title-navbar"> <a href="../index.html">DW2 Gamers</a> </li>
+            <li><a href="../produtos/produtos.html">Produtos</a></li>
+            <li><a href="./RCliente.html">Clientes</a></li>
+            <li><a href="./CCliente.html">Novo cliente</a></li>
+            <li><a href="./UCliente.html">Atualizar cliente</a></li>
+            <li class="logout"> <a href="../index.html">Sair</a></li>
+        </ul>
+    </nav>
+    <div class="header">
+        <h1><strong> Informações dos Clientes - Nome da Loja </strong></h1>
+        <hr>
+    </div>
+
+    <!-- Link para a pagina que cria cliente -->
+    <a href="./CCliente.html">Criar um novo Cliente</a> <br><br>
+
+    <!-- Essa sera a pagina "principal" para cliente (read), servindo de link para o delete, update e create 
+         Alem disso, servira de link para visualizar as compras de um cliente. -->
+    <!-- Tabela de clientes -->
+    <div class="tableCliente">
+        <table border=1>
+            <tr>
+                <!-- cabecalho da tabela -->
+                <th scope="col"> NOME </th>
+                <th scope="col"> E-MAIL </th>
+                <th scope="col"> CPF </th>
+                <th scope="col"> TELEFONE </th>
+                <th scope="col"> SEXO </th>
+                <th scope="col"> CEP </th>
+                <th scope="col"> LOGRADOURO </th>
+                <th scope="col"> NÚMERO </th>
+                <th scope="col"> BAIRRO </th>
+                <th scope="col"> CIDADE </th>
+                <th scope="col"> ESTADO </th>
+                <th scope="col"> AÇÕES </th>
+            </tr>
+            <tr>
+                <!-- Linha 1 -->
+                <td> Ricardo da Silva</td>
+                <td> ricardo@hotmail.com</td>
+                <td> 085.996.225-89</td>
+                <td> (16)99734-3500</td>
+                <td> Masculino</td>
+                <td> 135698450</td>
+                <td> Rua Doutor Major</td>
+                <td> 110</td>
+                <td> Santa Felicia</td>
+                <td> São Carlos</td>
+                <td> São Paulo</td>
+                <!-- Link para a pagina que deleta cliente e atualiza cliente-->
+                <td> <a href="/api/DeleteCliente"> Deletar</a> <a href="./UCliente.html">Atualizar</a> <a
+                        href="./Compras.html">Ver Compras</a> </td>
+            </tr>
+            <tr>
+                <!-- Linha 2 -->
+                <td> Mariana Santos</td>
+                <td> mari@gmail.com</td>
+                <td> 044.234.765-89</td>
+                <td> (16)98535-3500</td>
+                <td> Feminino</td>
+                <td> 135692460</td>
+                <td> Rua das Laranjas</td>
+                <td> 150</td>
+                <td> Centro</td>
+                <td> São Carlos</td>
+                <td> São Paulo</td>
+                <!-- Link para a pagina que deleta cliente e atualiza cliente-->
+                <td> <a href="/api/DeleteCliente"> Deletar</a> <a href="./UCliente.html">Atualizar</a> <a
+                        href="./Compras.html">Ver Compras</a> </td>
+            </tr>
+            <tr>
+                <!-- Linha 3 -->
+                <td> Jose Carvalho</td>
+                <td> jofe@hotmail.com</td>
+                <td> 234.926.525-19</td>
+                <td> (16)96478-3500</td>
+                <td> Masculino</td>
+                <td> 457698450</td>
+                <td> Rua São Paulo</td>
+                <td> 540</td>
+                <td> Vila Aparecida</td>
+                <td> São Carlos</td>
+                <td> São Paulo</td>
+                <!-- Link para a pagina que deleta cliente e atualiza cliente-->
+                <td> <a href="/api/DeleteCliente"> Deletar</a> <a href="./UCliente.html">Atualizar</a> <a
+                        href="./Compras.html">Ver Compras</a> </td>
+            </tr>
+        </table>
+    </div>
+</body>
