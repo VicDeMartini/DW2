@@ -12,17 +12,32 @@
 
 <body>
     <!-- cabecalho da pagina -->
-    <nav id="menu">
-        <ul>
-            <li id="title-navbar"> <a href="../index.html">DW2 Gamers</a> </li>
-            <li><a href="../produtos/produtos.html">Produtos</a></li>
-            <li><a href="../compras/RCompras.html">Compras</a></li>
-            <li><a href="./RCliente.html">Clientes</a></li>
-            <li><a href="./CCliente.html">Novo cliente</a></li>
-            <li><a href="./UCliente.html">Atualizar cliente</a></li>
-            <li class="logout"> <a href="../index.html">Sair</a></li>
-        </ul>
-    </nav>
+    <div class="navbar">
+        <a href="../index.html">DW2 Games</a>
+        <a href="../compras/RCompras.html">Compras</a>
+        <div class="dropdown">
+            <button class="dropbtn">Produtos
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="../produtos/Produtos.html">Catalogo de produtos</a>
+                <a href="../produtos/RProduto.html">Lista de produtos</a>
+                <a href="../produtos/CProduto.html">Inserir produto</a>
+                <a href="../produtos/UProduto.html">Editar/Excluir produto</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Clientes
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="./RCliente.html">Lista de clientes</a>
+                <a href="./CCliente.html">Inserir cliente</a>
+                <a href="./UCliente.html">Editar/Excluir cliente</a>
+            </div>
+        </div>
+    </div>
+
     <div class="header">
         <h1><strong> Atualizar Cliente </strong></h1>
 
