@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="../CSS/main.css" />
+    <link rel="stylesheet" type="text/css" href="../CSS/clientes.css" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale-1.0">
@@ -22,12 +23,12 @@
         </ul>
     </nav>
     <div class="header">
-        <h1><strong> Atualizar Cliente - Nome da Loja </strong></h1>
+        <h1><strong> Atualizar Cliente </strong></h1>
 
     </div>
 
     <!-- Forms para cadastros -->
-    <div class="formCliente">
+    <div class="form-cliente">
         <form action="api/atualizaCliente" method="post">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" placeholder="Nome do Cliente" />
@@ -82,7 +83,7 @@
             <input type="text" id="estado" name="estado" placeholder="Estado do Cliente" />
             <br>
 
-            <input type="submit" id="Cadastrar" />
+            <input class="button" type="submit" id="Cadastrar" />
         </form>
     </div>
 
