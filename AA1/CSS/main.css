@@ -8,21 +8,16 @@ body {
     margin-left: 50px;
 }
 
-.logout {
-    color: cadetblue;
-    font-size: 32px;
-}
-
 
 /* Navbar container */
-.navbar {
+#navbar {
     overflow: hidden;
     background-color: #333;
     font-family: Arial;
 }
 
 /* Links inside the navbar */
-.navbar a {
+#navbar a {
     float: left;
     font-size: 20px;
     color: white;
@@ -32,13 +27,13 @@ body {
 }
 
 /* The dropdown container */
-.dropdown {
+#dropdown {
     float: left;
     overflow: hidden;
 }
 
 /* Dropdown button */
-.dropdown .dropbtn {
+#dropdown #dropbtn {
     font-size: 20px;
     border: none;
     outline: none;
@@ -52,14 +47,14 @@ body {
 }
 
 /* Add a red background color to navbar links on hover */
-.navbar a:hover,
-.dropdown:hover .dropbtn {
+#navbar a:hover,
+#dropdown:hover #dropbtn {
     background-color: rgb(255, 255, 255);
     color: #404040;
 }
 
 /* Dropdown content (hidden by default) */
-.dropdown-content {
+#dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -69,7 +64,7 @@ body {
 }
 
 /* Links inside the dropdown */
-.dropdown-content a {
+#dropdown-content a {
     float: none;
     color: black;
     padding: 15px 16px;
@@ -79,11 +74,33 @@ body {
 }
 
 /* Add a grey background color to dropdown links on hover */
-.dropdown-content a:hover {
+#dropdown-content a:hover {
     background-color: #ddd;
 }
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
+#dropdown:hover #dropdown-content {
     display: block;
+} 
+
+/* Responsivity */
+
+@media only screen and (max-device-width: 900px) {
+    body {
+        padding: 30px 33px;
+    }
+
+    #title-navbar {
+        font-size: 30px;
+    }
+
+}
+@media only screen and (max-device-width: 400px) {
+    body {
+        padding: 30px 33px;
+    }
+
+    #title-navbar {
+        font-size: 20px;
+    }
 }

@@ -1,55 +1,110 @@
 body {
     padding: 40px 44px;
 }
-.title-page{
+
+.title-page {
     margin-top: 50px;
     font-size: 40px;
-    color:#404040;
+    color: #404040;
 }
-.content-cards{
-    display:flex;
+
+.content-cards {
+    display: flex;
     justify-content: space-around;
     align-items: center;
     margin: 60px 0;
 }
-.card-product{
-width: 450px;
-height: 600px;
-background: #FFFFFF;
-border: 1px solid #E6E7EC;
-box-sizing: border-box;
-box-shadow: 0px 4px 18px -13px #223456;
-border-radius: 5px;
-align-items: center;
-padding: 10px;
+
+.card-product {
+    width: 450px;
+    height: 600px;
+    background: #FFFFFF;
+    border: 1px solid #E6E7EC;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 18px -13px #223456;
+    border-radius: 5px;
+    align-items: center;
+    padding: 10px;
 
 
 }
-.image{
+
+.image {
     margin-left: 55px;
     width: 300px;
     height: 250px;
 }
-.title{
+
+.title {
     font-size: 22px;
     font-weight: bold;
     margin-top: 20px;
 }
-.description{
-    margin:  10px 0;
+
+.description {
+    margin: 10px 0;
     font-size: 20px;
 }
-.price{
+
+.price {
     font-size: 30px;
-    color:#404040;
+    color: #404040;
     font-weight: bold;
     margin: auto 20px auto;
 }
-.see-more{
+
+.see-more {
     text-decoration: none;
     margin-left: 320px;
     margin-bottom: 10px;
     font-size: 20px;
 }
-  
-  
+
+/* Responsivity */
+
+@media only screen and (max-device-width: 900px) {
+
+}
+@media only screen and (max-device-width: 400px) {
+    .title-page {
+        font-size: 30px;
+        width: 400px;
+    }
+
+    .content-cards {
+        display: grid;
+
+        margin: 16px auto;
+    }
+
+    .card-product {
+        width: 350px;
+    height: 450px;
+        margin-bottom: 50px;
+
+    }
+
+    .image {
+        margin-left: 55px;
+        width: 200px;
+        height: 150px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .price {
+        font-size: 28px;
+        margin: auto 20px auto;
+    }
+
+    .see-more {
+        margin-left: 240px;
+        font-size: 20px;
+    }
+}

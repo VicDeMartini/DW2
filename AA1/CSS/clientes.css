@@ -97,3 +97,11 @@ textarea {
     color: rgb(3, 2, 2);
     font-weight: bold;
 }
+
+/* Responsivity */
+@media only screen and (max-device-width: 900px) {
+
+}
+@media only screen and (max-device-width: 400px) {
+
+}
