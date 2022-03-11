@@ -47,89 +47,93 @@
     <!-- Tabela de clientes -->
     <div class="table-cliente">
         <table border=1>
-            <tr>
-                <!-- cabecalho da tabela -->
-                <th scope="col"> NOME </th>
-                <th scope="col"> FORNECEDOR </th>
-                <th scope="col"> DESCRIÇÃO </th>
-                <th scope="col"> PREÇO </th>
-                <th scope="col"> AÇÕES </th>
+            <thead>
+                <tr>
+                    <!-- cabecalho da tabela -->
+                    <th scope="col"> NOME </th>
+                    <th scope="col"> FORNECEDOR </th>
+                    <th scope="col"> DESCRIÇÃO </th>
+                    <th scope="col"> PREÇO </th>
+                    <th scope="col"> AÇÕES </th>
 
-            </tr>
-            <tr>
-                <!-- Linha 1 -->
-                <td> Headset Gamer RGB Blackfire Preto FORTREK</td>
-                <td> Amazon</td>
-                <td> Comprimento: 1,9m têxtil trançado.
-                    Conector: 2X P2 + USB + adaptador.
-                    Pesa apenas 450 g.
-                    Impedância: 22Ohms±15% Sensibilidade: 109db±3dB Resposta Frequência: 20Hz~20Khz.</td>
-                <td> R$ 119,00 </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!-- Linha 1 -->
+                    <td data-columnName="NOME"> Headset Gamer RGB Blackfire Preto FORTREK</td>
+                    <td data-columnName="FORNECEDOR"> Amazon</td>
+                    <td data-columnName="DESCRIÇÃO"> Comprimento: 1,9m têxtil trançado.
+                        Conector: 2X P2 + USB + adaptador.
+                        Pesa apenas 450 g.
+                        Impedância: 22Ohms±15% Sensibilidade: 109db±3dB Resposta Frequência: 20Hz~20Khz.</td>
+                    <td data-columnName="PREÇO"> R$ 119,00 </td>
 
-                <!-- Link para a pagina que deleta cliente e atualiza cliente-->
-                <td> <a href="/api/DeleteProduto"> Deletar</a> <a href="./UProduto.html">Atualizar</a> </td>
-            </tr>
-            <tr>
-                <!-- Linha 2 -->
-                <td> Echo Dot (4ª Geração): Smart Speaker com Alexa</td>
-                <td> Kabum </td>
-                <td> O novo design de áudio com direcionamento frontal (1 speaker de 1,6") garante mais graves e um som
-                    completo.
-                    Sempre pronta para ajudar: peça para a Alexa tocar músicas, responder perguntas, checar a previsão
-                    do tempo e muito mais.</td>
-                <td> R$ 379,00 </td>
-                <!-- Link para a pagina que deleta cliente e atualiza cliente-->
-                <td> <a href="/api/DeleteProduto"> Deletar</a> <a href="./UProduto.html">Atualizar</a> </td>
-            </tr>
-            <tr>
-                <!-- Linha 3 -->
-                <td> Cadeira Gamer MoobX Nitro</td>
-                <td> Kabum</td>
-                <td> Assentos especiais com espuma injetada de 50Kg/m.
-                    Cilindro com 100mm de regulagem de altura.
-                    Função basculante com parte traseira reclinável, com ajuste de até 180.
-                    Apoio de cabeça menor e almofada para lombar que aumenta o conforto e suporte no dia a dia.</td>
-                <td> R$ 999,00</td>
+                    <!-- Link para a pagina que deleta cliente e atualiza cliente-->
+                    <td data-columnName="AÇÕES"> <a href="/api/DeleteProduto"> Deletar</a> <a href="./UProduto.html">Atualizar</a> </td>
+                </tr>
+                <tr>
+                    <!-- Linha 2 -->
+                    <td data-columnName="NOME"> Echo Dot (4ª Geração): Smart Speaker com Alexa</td>
+                    <td data-columnName="FORNECEDOR"> Kabum </td>
+                    <td data-columnName="DESCRIÇÃO"> O novo design de áudio com direcionamento frontal (1 speaker de 1,6") garante mais graves e um som
+                        completo.
+                        Sempre pronta para ajudar: peça para a Alexa tocar músicas, responder perguntas, checar a previsão
+                        do tempo e muito mais.</td>
+                    <td data-columnName="PREÇO"> R$ 379,00 </td>
+                    <!-- Link para a pagina que deleta cliente e atualiza cliente-->
+                    <td data-columnName="AÇÕES"> <a href="/api/DeleteProduto"> Deletar</a> <a href="./UProduto.html">Atualizar</a> </td>
+                </tr>
+                <tr>
+                    <!-- Linha 3 -->
+                    <td data-columnName="NOME"> Cadeira Gamer MoobX Nitro</td>
+                    <td data-columnName="FORNECEDOR"> Kabum</td>
+                    <td data-columnName="DESCRIÇÃO"> Assentos especiais com espuma injetada de 50Kg/m.
+                        Cilindro com 100mm de regulagem de altura.
+                        Função basculante com parte traseira reclinável, com ajuste de até 180.
+                        Apoio de cabeça menor e almofada para lombar que aumenta o conforto e suporte no dia a dia.</td>
+                    <td data-columnName="PREÇO"> R$ 999,00</td>
 
-                <!-- Link para a pagina que deleta cliente e atualiza cliente-->
-                <td> <a href="/api/DeleteCliente"> Deletar</a> <a href="./UCliente.html">Atualizar</a> </td>
-            </tr>
-            <tr>
-                <!-- Linha 3 -->
-                <td> Mesa Gamer Madesa 9409 - Preto</td>
-                <td> Magazine Luiza </td>
-                <td> Altura: 75 cm Largura: 136 cm Profundidade: 60 cm.
-                    Material: MDP.
-                    Acabamento em Pintura Poliéster de alta resistência.
-                    Ferragens de alta qualidade.</td>
-                <td> R$ 299,00</td>
+                    <!-- Link para a pagina que deleta cliente e atualiza cliente-->
+                    <td data-columnName="AÇÕES"> <a href="/api/DeleteCliente"> Deletar</a> <a href="./UCliente.html">Atualizar</a> </td>
+                </tr>
+                <tr>
+                    <!-- Linha 3 -->
+                    <td data-columnName="NOME"> Mesa Gamer Madesa 9409 - Preto</td>
+                    <td data-columnName="FORNECEDOR"> Magazine Luiza </td>
+                    <td data-columnName="DESCRIÇÃO"> Altura: 75 cm Largura: 136 cm Profundidade: 60 cm.
+                        Material: MDP.
+                        Acabamento em Pintura Poliéster de alta resistência.
+                        Ferragens de alta qualidade.</td>
+                    <td data-columnName="PREÇO"> R$ 299,00</td>
 
-                <!-- Link para a pagina que deleta cliente e atualiza cliente-->
-                <td> <a href="/api/DeleteCliente"> Deletar</a> <a href="./UCliente.html">Atualizar</a> </td>
-            </tr>
-            <tr>
-                <!-- Linha 3 -->
-                <td> Teclado Gamer Semi Mecânico Multimídia Led Rgb Usb</td>
-                <td> Magazine Luiza </td>
-                <td> Teclado Gamer Profissional Semi Mecânico com Iluminação Led Rgb. conexão USB.
-                    Com sua membrana Anti-ghosting, as teclas são riscadas a laser e com anti-respingo.</td>
-                <td> R$ 79,00</td>
+                    <!-- Link para a pagina que deleta cliente e atualiza cliente-->
+                    <td data-columnName="AÇÕES"> <a href="/api/DeleteCliente"> Deletar</a> <a href="./UCliente.html">Atualizar</a> </td>
+                </tr>
+                <tr>
+                    <!-- Linha 3 -->
+                    <td data-columnName="NOME"> Teclado Gamer Semi Mecânico Multimídia Led Rgb Usb</td>
+                    <td data-columnName="FORNECEDOR"> Magazine Luiza </td>
+                    <td data-columnName="DESCRIÇÃO"> Teclado Gamer Profissional Semi Mecânico com Iluminação Led Rgb. conexão USB.
+                        Com sua membrana Anti-ghosting, as teclas são riscadas a laser e com anti-respingo.</td>
+                    <td data-columnName="PREÇO"> R$ 79,00</td>
 
-                <!-- Link para a pagina que deleta cliente e atualiza cliente-->
-                <td> <a href="/api/DeleteCliente"> Deletar</a> <a href="./UCliente.html">Atualizar</a> </td>
-            </tr>
-            <tr>
-                <!-- Linha 3 -->
-                <td> Mouse HAVIT HV-MS1001 Gamer RGB 4800 DPI 7 Botões</td>
-                <td> Amazon </td>
-                <td> Design Ergonômico com Base Antiderrapante.
-                    Encaixa perfeitamente na mão, evitando fadiga por longo tempo de uso.
-                    Software dedicado para configurações de teclas e macros.</td>
-                <td> R$ 89,00</td>
+                    <!-- Link para a pagina que deleta cliente e atualiza cliente-->
+                    <td data-columnName="AÇÕES"> <a href="/api/DeleteCliente"> Deletar</a> <a href="./UCliente.html">Atualizar</a> </td>
+                </tr>
+                <tr>
+                    <!-- Linha 3 -->
+                    <td data-columnName="NOME"> Mouse HAVIT HV-MS1001 Gamer RGB 4800 DPI 7 Botões</td>
+                    <td data-columnName="FORNECEDOR"> Amazon </td>
+                    <td data-columnName="DESCRIÇÃO"> Design Ergonômico com Base Antiderrapante.
+                        Encaixa perfeitamente na mão, evitando fadiga por longo tempo de uso.
+                        Software dedicado para configurações de teclas e macros.</td>
+                    <td data-columnName="PREÇO"> R$ 89,00</td>
 
-                <!-- Link para a pagina que deleta cliente e atualiza cliente-->
-                <td> <a href="/api/DeleteCliente"> Deletar</a> <a href="./UCliente.html">Atualizar</a> </td>
-            </tr>
+                    <!-- Link para a pagina que deleta cliente e atualiza cliente-->
+                    <td data-columnName="AÇÕES"> <a href="/api/DeleteCliente"> Deletar</a> <a href="./UCliente.html">Atualizar</a> </td>
+                </tr>
+            </tbody>
         </table>
     </div>
 
