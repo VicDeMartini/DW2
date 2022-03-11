@@ -2,12 +2,6 @@ body {
     padding: 40px 44px;
 }
 
-form {
-    width: 400px;
-    padding: 1em;
-    border: 1px solid #CCC;
-    border-radius: 1em;
-}
 
 label,
 select {
@@ -78,10 +72,24 @@ textarea {
     font-weight: bold;
 }
 
+.form-cliente {
+    width: 400px;
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+}
+
 /* Responsivity */
 @media only screen and (max-device-width: 900px) {
 
 }
 @media only screen and (max-device-width: 400px) {
 
+}
+
+@media (max-device-width: 500px) {
+    label {
+        display: block;
+        text-align: left;
+    }
 }

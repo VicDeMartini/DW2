@@ -70,3 +70,10 @@
         flex: 0 1 100%;
     }
 }
+
+@media (max-device-width: 500px) {
+    label {
+        display: block;
+        text-align: left;
+    }
+}
