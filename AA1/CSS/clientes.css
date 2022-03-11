@@ -5,7 +5,6 @@ body {
 /* Links na table terao o efeito de botao. */
 table a {
     display: block; /* Um elemento por linha. */
-    width: 80%;
     border: none;
     background-color: #333;
     color: white;
