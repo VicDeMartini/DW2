@@ -1,6 +1,54 @@
 body {
     padding: 40px 44px;
 }
+
+/* Links na table terao o efeito de botao. */
+table a {
+    display: block; /* Um elemento por linha. */
+    border: none;
+    background-color: #333;
+    color: white;
+    padding: 3px 8px;
+    border: 3px solid #CCC;
+}/* Muda de cor ao selecionar o elemento. */
+table a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+table {
+    border: 1px solid #CCC;
+    border-collapse: collapse; /* Elementos colapsam suas bordas em uma so. */
+    width: 100%; /* Toma toda a horizontal da tela do aparelho. */
+    margin: 0;
+    padding: 0;
+}
+
+/* Cada elemento tr impar da table tera esta configuracao: */
+table tr:nth-of-type(even) { 
+    background: #eee;
+    border: 1px solid #ddd;
+    padding: .35em;
+}
+
+/* Configuracao dos elementos do header da table. */
+table th {
+    background: #333;
+    color: white;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+/* Configuracao adicional dos elementos do header e td.
+   como essa configuracao e utilizada nestes dois elementos
+   para nao repetir os valores, eles foram colocados dessa forma. */
+table th,
+table td {
+    padding: 3px;
+    border: 1px solid #CCC;
+    text-align: center;
+}
+
 #title-navbar {
     color: cadetblue;
     font-size: 40px;
