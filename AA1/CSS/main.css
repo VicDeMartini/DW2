@@ -1,5 +1,5 @@
 body {
-    padding: 40px 44px;
+    padding: 2rem;
 }
 
 /* Links na table terao o efeito de botao. */
@@ -8,7 +8,7 @@ table a {
     border: none;
     background-color: #333;
     color: white;
-    padding: 3px 8px;
+    padding: .2rem .6rem;
     border: 3px solid #CCC;
 }/* Muda de cor ao selecionar o elemento. */
 table a:hover {
@@ -30,10 +30,10 @@ table tbody tr:nth-of-type(odd) {
 }
 
 /* Configuracao dos elementos do header da table. */
-table th {
+table tr th {
     background: #333;
     color: white;
-    padding: 10px;
+    padding: .5rem;
     text-transform: uppercase;
 }
 
@@ -42,7 +42,7 @@ table th {
    para nao repetir os valores, eles foram colocados dessa forma. */
 table th,
 table td {
-    padding: 3px;
+    padding: .2rem;
     border: 1px solid #CCC;
     text-align: center;
 }
@@ -65,10 +65,9 @@ table td {
 /* Links inside the navbar */
 .navbar a {
     float: left;
-    font-size: 20px;
+    font-size: 1.3rem;
+    line-height: 1.6rem;
     color: white;
-    text-align: center;
-    padding: 18px 16px;
     text-decoration: none;
 }
 
@@ -79,6 +78,10 @@ table td {
     color: #404040;
 }
 
+.navbar a, .navbar .dropdown {
+    padding: 1.5rem;
+}
+
 /* The dropdown container */
 .navbar .dropdown {
     float: left;
@@ -87,16 +90,13 @@ table td {
 
 /* Dropdown button */
 .navbar .dropdown .dropbtn {
-    font-size: 20px;
+    font-size: 1.3rem;
     border: none;
     outline: none;
     color: white;
-    padding: 18px 16px;
     background-color: inherit;
     font-family: inherit;
-    /* Important for vertical align on mobile phones */
     margin: 0;
-    /* Important for vertical align on mobile phones */
 }
 
 /* Dropdown content (hidden by default) */
@@ -104,7 +104,8 @@ table td {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
+    min-width: 10rem;
+    margin-top: 1.5rem;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
@@ -113,7 +114,7 @@ table td {
 .navbar .dropdown-content a {
     float: none;
     color: black;
-    padding: 15px 16px;
+    padding: 1rem;
     text-decoration: none;
     display: block;
     text-align: left;
@@ -131,15 +132,7 @@ table td {
 
 /* Responsivity */
 
-@media only screen and (max-device-width: 900px) {
-    body {
-        padding: 30px 33px;
-    }
-
-    #title-navbar {
-        font-size: 30px;
-    }
-
+@media (max-device-width: 900px) {
     /* Desativa o cabecalho. */
     table thead{
         display: none;
@@ -156,13 +149,14 @@ table td {
     }
 
     table tr{
-        margin-bottom: 15px;
+        margin-bottom: 1.3rem;
     }
 
     /* Conteudo da "coluna" (direita). */
     table td{
         text-align: right;
         padding-left: 50%;
+        padding-right: 1rem;
         position: relative;
     }
 
@@ -172,18 +166,7 @@ table td {
         position: absolute;
         left: 0;
         width: 50%;
-        padding-left: 15px;
+        padding-left: 1rem;
         text-align: left;
     }
-
-}
-@media only screen and (max-device-width: 400px) { /* Diminuir a fonte total? */
-    body {
-        padding: 30px 33px;
-    }
-
-    #title-navbar {
-        font-size: 20px;
-    }
-
 }
