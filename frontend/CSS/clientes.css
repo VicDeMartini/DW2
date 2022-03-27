@@ -2,41 +2,6 @@ body {
     padding: 40px 44px;
 }
 
-.header {
-    font-weight: bold;
-}
-
-.new-cliente {
-    text-decoration: none;
-
-}
-
-table {
-    border-collapse: collapse;
-}
-
-tr {
-    background: #d3d3d37a;
-
-}
-
-th {
-    width: 150px;
-    padding: 10px;
-}
-
-td {
-    padding: 5px;
-    font-size: 18px;
-}
-
-form {
-
-    width: 400px;
-    padding: 1em;
-    border: 1px solid #CCC;
-    border-radius: 1em;
-}
 
 label,
 select {
@@ -81,6 +46,15 @@ textarea {
     resize: vertical;
 }
 
+.header {
+    font-weight: bold;
+}
+
+.new-cliente {
+    text-decoration: none;
+
+}
+
 .button {
     margin-left: 100px;
     border-radius: 6px;
@@ -96,4 +70,26 @@ textarea {
     font-size: 22px;
     color: rgb(3, 2, 2);
     font-weight: bold;
+}
+
+.form-cliente {
+    width: 400px;
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+}
+
+/* Responsivity */
+@media only screen and (max-device-width: 900px) {
+
+}
+@media only screen and (max-device-width: 400px) {
+
+}
+
+@media (max-device-width: 500px) {
+    label {
+        display: block;
+        text-align: left;
+    }
 }

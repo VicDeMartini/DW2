@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../CSS/main.css" />
+    <link rel="stylesheet" type="text/css" href="../CSS/clientes.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compras</title>
+</head>
+
+<body>
+    <!-- cabecalho da pagina -->
+
+    <div class="navbar">
+        <a href="../index.html">DW2 Games</a>
+        <a href="./RCompras.html">Compras</a>
+        <div class="dropdown">
+            <button class="dropbtn">Produtos
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="../produtos/Produtos.html">Catálogo de produtos</a>
+                <a href="../produtos/RProduto.html">Lista de produtos</a>
+                <a href="../produtos/CProduto.html">Inserir produto</a>
+                <a href="../produtos/UProduto.html">Editar produto</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Clientes
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="../clientes/RCliente.html">Lista de clientes</a>
+                <a href="../clientes/CCliente.html">Inserir cliente</a>
+                <a href="../clientes/UCliente.html">Editar cliente</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="header">
+        <h1>Compras</h1>
+    </div>
+
+    <!-- Tabela de compras -->
+    <div class="table-compras">
+        <table border=1>
+            <thead>
+                <tr>
+                    <!-- cabecalho da tabela -->
+                    <th scope="col"> NOME </th>
+                    <th scope="col"> E-MAIL </th>
+                    <th scope="col"> PRODUTO </th>
+                    <th scope="col"> PREÇO </th>
+                    <th scope="col"> DATA </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!-- Linha 1 -->
+                    <td data-columnName="NOME"> Ricardo da Silva</td>
+                    <td data-columnName="E-MAIL"> ricardo@hotmail.com</td>
+                    <td data-columnName="PRODUTO"> Headset Gamer RGB Blackfire Preto FORTREK </td>
+                    <td data-columnName="PREÇO"> R$ 119,00 </td>
+                    <td data-columnName="DATA"> 14/02/2022 </td>
+                </tr>
+                <tr>
+                    <!-- Linha 2 -->
+                    <td data-columnName="NOME"> Mariana Santos</td>
+                    <td data-columnName="E-MAIL"> mari@gmail.com</td>
+                    <td data-columnName="PRODUTO"> Teclado Gamer Semi Mecânico Multimídia Led Rgb Usb </td>
+                    <td data-columnName="PREÇO"> R$ 79,00 </td>
+                    <td data-columnName="DATA"> 13/02/2022 </td>
+                </tr>
+                <tr>
+                    <!-- Linha 3 -->
+                    <td data-columnName="NOME"> Jose Carvalho</td>
+                    <td data-columnName="E-MAIL"> jofe@hotmail.com</td>
+                    <td data-columnName="PRODUTO"> Cadeira Gamer MoobX Nitro </td>
+                    <td data-columnName="PREÇO"> R$ 999,00 </td>
+                    <td data-columnName="DATA"> 10/02/2022 </td>
+                </tr>
+                <tr>
+                    <!-- Linha 4 -->
+                    <td data-columnName="NOME"> Jose Carvalho</td>
+                    <td data-columnName="E-MAIL"> jofe@hotmail.com</td>
+                    <td data-columnName="PRODUTO"> Echo Dot (4ª Geração): Smart Speaker com Alexa </td>
+                    <td data-columnName="PREÇO"> R$ 379,00 </td>
+                    <td data-columnName="DATA"> 07/02/2022 </td>
+                </tr>
+                <tr>
+                    <!-- Linha 5 -->
+                    <td data-columnName="NOME"> Mariana Santos</td>
+                    <td data-columnName="E-MAIL"> mari@gmail.com</td>
+                    <td data-columnName="PRODUTO"> Mouse HAVIT HV-MS1001 Gamer RGB 4800 DPI 7 Botões </td>
+                    <td data-columnName="PREÇO"> R$ 89,00 </td>
+                    <td data-columnName="DATA"> 06/02/2022 </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
