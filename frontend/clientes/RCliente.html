@@ -1,139 +1,158 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
+  <head>
     <link rel="stylesheet" type="text/css" href="../CSS/main.css" />
     <link rel="stylesheet" type="text/css" href="../CSS/clientes.css" />
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clientes</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- cabecalho da pagina -->
-    
+
     <div class="navbar">
-        <a href="../index.html">DW2 Games</a>
-        <a href="../compras/RCompras.html">Compras</a>
-        <div class="dropdown">
-          <button class="dropbtn">Produtos
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="../produtos/Produtos.html">Catálogo de produtos</a>
-            <a href="../produtos/RProduto.html">Lista de produtos</a>
-            <a href="../produtos/CProduto.html">Inserir produto</a>
-            <a href="../produtos/UProduto.html">Editar produto</a>
-          </div>
+      <a href="../index.html">DW2 Games</a>
+      <a href="../compras/RCompras.html">Compras</a>
+      <div class="dropdown">
+        <button class="dropbtn">
+          Produtos
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="../produtos/Produtos.html">Catálogo de produtos</a>
+          <a href="../produtos/RProduto.html">Lista de produtos</a>
+          <a href="../produtos/CProduto.html">Inserir produto</a>
+          <a href="../produtos/UProduto.html">Editar produto</a>
         </div>
-        <div class="dropdown">
-            <button class="dropbtn">Clientes
-              <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <a href="./RCliente.html">Lista de clientes</a>
-              <a href="./CCliente.html">Inserir cliente</a>
-              <a href="./UCliente.html">Editar cliente</a>
-            </div>
-          </div>
       </div>
+      <div class="dropdown">
+        <button class="dropbtn">
+          Clientes
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="./RCliente.html">Lista de clientes</a>
+          <a href="./CCliente.html">Inserir cliente</a>
+          <a href="./UCliente.html">Editar cliente</a>
+        </div>
+      </div>
+    </div>
     <div class="header">
-        <h1>Clientes </h1>
+      <h1>Clientes</h1>
     </div>
 
     <!-- Tabela de clientes -->
     <div class="table-cliente">
-      <table border=1>
-          <thead>
-              <tr>
-                  <!-- cabecalho da tabela -->
-                  <th scope="col"> NOME </th>
-                  <th scope="col"> E-MAIL </th>
-                  <th scope="col"> TELEFONE </th>
-                  <th scope="col"> CEP </th>
-                  <th scope="col"> LOGRADOURO </th>
-                  <th scope="col"> NÚMERO </th>
-                  <th scope="col"> BAIRRO </th>
-                  <th scope="col"> CIDADE </th>
-                  <th scope="col"> ESTADO </th>
-                  <th scope="col"> AÇÕES </th>
-              </tr>
-          </thead>
-          <tbody>
-              <tr>
-                  <!-- Linha 1 -->
-                  <td data-columnName="NOME"> Ricardo da Silva</td>
-                  <td data-columnName="E-MAIL"> ricardo@hotmail.com</td>
-                  <td data-columnName="TELEFONE"> (16)99734-3500</td>
-                  <td data-columnName="CEP"> 135698450</td>
-                  <td data-columnName="LOGRADOURO"> Rua Doutor Major</td>
-                  <td data-columnName="NÚMERO"> 110</td>
-                  <td data-columnName="BAIRRO"> Santa Felicia</td>
-                  <td data-columnName="CIDADE"> São Carlos</td>
-                  <td data-columnName="ESTADO"> São Paulo</td>
-                  <!-- Link para a pagina que deleta cliente e atualiza cliente-->
-                  <td data-columnName="AÇÕES"> <a href="/api/DeleteCliente"> Deletar</a> <a href="clientes/UCliente.html" >Atualizar</a> </td>
-              </tr>
-              <tr>
-                  <!-- Linha 2 -->
-                  <td data-columnName="NOME"> Mariana Santos</td>
-                  <td data-columnName="E-MAIL"> mari@gmail.com</td>
-                  <td data-columnName="TELEFONE"> (16)98535-3500</td>
-                  <td data-columnName="CEP"> 135692460</td>
-                  <td data-columnName="LOGRADOURO"> Rua das Laranjas</td>
-                  <td data-columnName="NÚMERO"> 150</td>
-                  <td data-columnName="BAIRRO"> Centro</td>
-                  <td data-columnName="CIDADE"> São Carlos</td>
-                  <td data-columnName="ESTADO"> São Paulo</td>
-                  <!-- Link para a pagina que deleta cliente e atualiza cliente-->
-                  <td data-columnName="AÇÕES"> <a href="/api/DeleteCliente"> Deletar</a> <a href="clientes/UCliente.html">Atualizar</a> </td>
-              </tr>
-              <tr>
-                  <!-- Linha 2 -->
-                  <td data-columnName="NOME"> Mariana Santos</td>
-                  <td data-columnName="E-MAIL"> mari@gmail.com</td>
-                  <td data-columnName="TELEFONE"> (16)98535-3500</td>
-                  <td data-columnName="CEP"> 135692460</td>
-                  <td data-columnName="LOGRADOURO"> Rua das Laranjas</td>
-                  <td data-columnName="NÚMERO"> 150</td>
-                  <td data-columnName="BAIRRO"> Centro</td>
-                  <td data-columnName="CIDADE"> São Carlos</td>
-                  <td data-columnName="ESTADO"> São Paulo</td>
-                  <!-- Link para a pagina que deleta cliente e atualiza cliente-->
-                  <td data-columnName="AÇÕES"> <a href="/api/DeleteCliente"> Deletar</a> <a href="clientes/UCliente.html">Atualizar</a> </td>
-              </tr>
-              <tr>
-                  <!-- Linha 2 -->
-                  <td data-columnName="NOME"> Mariana Santos</td>
-                  <td data-columnName="E-MAIL"> mari@gmail.com</td>
-                  <td data-columnName="TELEFONE"> (16)98535-3500</td>
-                  <td data-columnName="CEP"> 135692460</td>
-                  <td data-columnName="LOGRADOURO"> Rua das Laranjas</td>
-                  <td data-columnName="NÚMERO"> 150</td>
-                  <td data-columnName="BAIRRO"> Centro</td>
-                  <td data-columnName="CIDADE"> São Carlos</td>
-                  <td data-columnName="ESTADO"> São Paulo</td>
-                  <!-- Link para a pagina que deleta cliente e atualiza cliente-->
-                  <td data-columnName="AÇÕES"> <a href="/api/DeleteCliente"> Deletar</a> <a href="clientes/UCliente.html">Atualizar</a> </td>
-              </tr>
-              <tr>
-                  <!-- Linha 2 -->
-                  <td data-columnName="NOME"> Mariana Santos</td>
-                  <td data-columnName="E-MAIL"> mari@gmail.com</td>
-                  <td data-columnName="TELEFONE"> (16)98535-3500</td>
-                  <td data-columnName="CEP"> 135692460</td>
-                  <td data-columnName="LOGRADOURO"> Rua das Laranjas</td>
-                  <td data-columnName="NÚMERO"> 150</td>
-                  <td data-columnName="BAIRRO"> Centro</td>
-                  <td data-columnName="CIDADE"> São Carlos</td>
-                  <td data-columnName="ESTADO"> São Paulo</td>
-                  <!-- Link para a pagina que deleta cliente e atualiza cliente-->
-                  <td data-columnName="AÇÕES"> <a href="/api/DeleteCliente"> Deletar</a>  <a href="clientes/UCliente.html">Atualizar</a> </td>
-              </tr>
-          </tbody>
+      <table border="1">
+        <thead>
+          <tr>
+            <!-- cabecalho da tabela -->
+            <th scope="col">NOME</th>
+            <th scope="col">E-MAIL</th>
+            <th scope="col">TELEFONE</th>
+            <th scope="col">CEP</th>
+            <th scope="col">LOGRADOURO</th>
+            <th scope="col">NÚMERO</th>
+            <th scope="col">BAIRRO</th>
+            <th scope="col">CIDADE</th>
+            <th scope="col">ESTADO</th>
+            <th scope="col">AÇÕES</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <!-- Linha 1 -->
+            <td data-columnName="NOME">Ricardo da Silva</td>
+            <td data-columnName="E-MAIL">ricardo@hotmail.com</td>
+            <td data-columnName="TELEFONE">(16)99734-3500</td>
+            <td data-columnName="CEP">135698450</td>
+            <td data-columnName="LOGRADOURO">Rua Doutor Major</td>
+            <td data-columnName="NÚMERO">110</td>
+            <td data-columnName="BAIRRO">Santa Felicia</td>
+            <td data-columnName="CIDADE">São Carlos</td>
+            <td data-columnName="ESTADO">São Paulo</td>
+            <!-- Link para a pagina que deleta cliente e atualiza cliente-->
+            <td data-columnName="AÇÕES">
+              <a href="/api/DeleteCliente"> Deletar</a>
+              <a href="clientes/UCliente.html">Atualizar</a>
+            </td>
+          </tr>
+          <tr>
+            <!-- Linha 2 -->
+            <td data-columnName="NOME">Mariana Santos</td>
+            <td data-columnName="E-MAIL">mari@gmail.com</td>
+            <td data-columnName="TELEFONE">(16)98535-3500</td>
+            <td data-columnName="CEP">135692460</td>
+            <td data-columnName="LOGRADOURO">Rua das Laranjas</td>
+            <td data-columnName="NÚMERO">150</td>
+            <td data-columnName="BAIRRO">Centro</td>
+            <td data-columnName="CIDADE">São Carlos</td>
+            <td data-columnName="ESTADO">São Paulo</td>
+            <!-- Link para a pagina que deleta cliente e atualiza cliente-->
+            <td data-columnName="AÇÕES">
+              <a href="/api/DeleteCliente"> Deletar</a>
+              <a href="clientes/UCliente.html">Atualizar</a>
+            </td>
+          </tr>
+          <tr>
+            <!-- Linha 2 -->
+            <td data-columnName="NOME">Mariana Santos</td>
+            <td data-columnName="E-MAIL">mari@gmail.com</td>
+            <td data-columnName="TELEFONE">(16)98535-3500</td>
+            <td data-columnName="CEP">135692460</td>
+            <td data-columnName="LOGRADOURO">Rua das Laranjas</td>
+            <td data-columnName="NÚMERO">150</td>
+            <td data-columnName="BAIRRO">Centro</td>
+            <td data-columnName="CIDADE">São Carlos</td>
+            <td data-columnName="ESTADO">São Paulo</td>
+            <!-- Link para a pagina que deleta cliente e atualiza cliente-->
+            <td data-columnName="AÇÕES">
+              <a href="/api/DeleteCliente"> Deletar</a>
+              <a href="clientes/UCliente.html">Atualizar</a>
+            </td>
+          </tr>
+          <tr>
+            <!-- Linha 2 -->
+            <td data-columnName="NOME">Mariana Santos</td>
+            <td data-columnName="E-MAIL">mari@gmail.com</td>
+            <td data-columnName="TELEFONE">(16)98535-3500</td>
+            <td data-columnName="CEP">135692460</td>
+            <td data-columnName="LOGRADOURO">Rua das Laranjas</td>
+            <td data-columnName="NÚMERO">150</td>
+            <td data-columnName="BAIRRO">Centro</td>
+            <td data-columnName="CIDADE">São Carlos</td>
+            <td data-columnName="ESTADO">São Paulo</td>
+            <!-- Link para a pagina que deleta cliente e atualiza cliente-->
+            <td data-columnName="AÇÕES">
+              <a href="/api/DeleteCliente"> Deletar</a>
+              <a href="clientes/UCliente.html">Atualizar</a>
+            </td>
+          </tr>
+          <tr>
+            <!-- Linha 2 -->
+            <td data-columnName="NOME">Mariana Santos</td>
+            <td data-columnName="E-MAIL">mari@gmail.com</td>
+            <td data-columnName="TELEFONE">(16)98535-3500</td>
+            <td data-columnName="CEP">135692460</td>
+            <td data-columnName="LOGRADOURO">Rua das Laranjas</td>
+            <td data-columnName="NÚMERO">150</td>
+            <td data-columnName="BAIRRO">Centro</td>
+            <td data-columnName="CIDADE">São Carlos</td>
+            <td data-columnName="ESTADO">São Paulo</td>
+            <!-- Link para a pagina que deleta cliente e atualiza cliente-->
+            <td data-columnName="AÇÕES">
+              <a href="/api/DeleteCliente"> Deletar</a>
+              <a href="clientes/UCliente.html">Atualizar</a>
+            </td>
+          </tr>
+        </tbody>
       </table>
-  </div>
+    </div>
 
-    <div class="button-new-create"><a href="./CCliente.html" class="input-new-create">Novo cliente</a></div>
-</body>
+    <div class="button-new-create">
+      <a href="./CCliente.html" class="input-new-create">Novo cliente</a>
+    </div>
+  </body>
+</html>
