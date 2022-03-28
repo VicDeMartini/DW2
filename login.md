@@ -1,4 +1,4 @@
 # Dados para login no Strapi
 
-Email: teste@admin.com  
+Email: teste@gmail.com  
 Senha: #Abc123456
