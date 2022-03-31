@@ -12,6 +12,31 @@ function fetchData(page, callback) {
     });
 }
 
+// Faz um POST request no backend, recebendo como entrada um payload e page
+// payload: um array de array que contém um unico elemento data com todos os elementos de um produto
+// page: endpoint utilizado da api
+function fetchPost(page, payload){
+
+  // Define as opções do método fetch.
+  const options = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(payload)
+  };
+
+  // Realiza o POST
+  // OBS: .then() é uma object promise do javacript, para a execucao assincrona de rotinas.
+  fetch(API_URL + page, options)
+    .then((response) =>{
+      if(response.status == 200) // Demonstra sucesso ou falha.
+        alert("Produto Criado com Sucesso!")
+      else
+        alert("Falha ao Criar Produto!")
+    });
+}
+
 /// Popula um elemento HTML de forma iterativa.
 /// Recebe um ID de elemento, os dados a serem preenchidos e uma função para construir o HTML.
 function appendToElement(elementId, data, htmlBuilder) {

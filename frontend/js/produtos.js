@@ -26,3 +26,28 @@ const handleData = function (data) {
 
 /// Adiciona um listener que chama a função de fetchData assim que a página é carregada.
 window.addEventListener("load", fetchData("/produtos?populate=*", handleData));
+
+// Adiciona um listener no botão de cadastro da página CProduto.html.
+document.getElementById("Cadastrar").addEventListener("click", function(){
+
+  // Criado o objeto de payload para criar um novo produto no backend.
+  const payload = {
+    data: {
+      nome: document.getElementById("nome").value,
+      preco: parseInt(document.getElementById("preco").value),
+      quantidade_em_estoque: parseInt(document.getElementById("quantidade_em_estoque").value),
+      cor: document.getElementById("cor").value,
+      descricao: document.getElementById("descricao").value
+    }
+  }
+
+  // Realiza o post.
+  fetchPost("/produtos", payload);
+  
+  // Limpa todos os inputs.
+  document.getElementById("nome").value = "";
+  document.getElementById("preco").value = "";
+  document.getElementById("quantidade_em_estoque").value = "";
+  document.getElementById("cor").value = "";
+  document.getElementById("descricao").value = "";
+});
