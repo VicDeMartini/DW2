@@ -2,7 +2,9 @@ const API_URL = "http://localhost:1337/api";
 const MEDIA_URL = "http://localhost:1337";
 
 /// Faz um GET request no backend e retorna o resultado para a função de callback.
-function fetchGet(page, callback) {
+/// page: endpoit utilizado na API
+/// callback: função de callback a ser chamada com a resposta da API
+function fetchData(page, callback) {
   fetch(API_URL + page)
     .then((response) => {
       return response.json();
@@ -12,77 +14,56 @@ function fetchGet(page, callback) {
     });
 }
 
-// Faz um POST request no backend, recebendo como entrada um payload e page [Adiciona um elemento no banco]
-// payload: um array de array que contém um unico elemento data com todos os atributos
-// page: endpoint utilizado da api
-function fetchPost(page, payload){
-
-  // Define as opções do método fetch.
+/// Faz um POST request no backend, recebendo como entrada um payload e page [Adiciona um elemento no banco]
+/// payload: um objeto do tipo a ser criado contendo todos os seus atributos
+/// page: endpoint utilizado na API
+/// callback: função de callback a ser chamada com a resposta da API
+function postData(page, payload, callback) {
   const options = {
     method: "POST",
     headers: {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
     },
-    body: JSON.stringify(payload)
+    body: JSON.stringify(payload),
   };
 
   // Realiza o POST
-  // OBS: .then() é uma object promise do javacript, para a execucao assincrona de rotinas.
-  fetch(API_URL + page, options)
-    .then((response) =>{
-      if(response.status == 200) // Demonstra sucesso ou falha.
-        alert("Sucesso Post!")
-      else
-        alert("Falha Post!")
-    });
+  fetch(API_URL + page, options).then((response) => {
+    callback(response);
+  });
 }
 
-// Faz um DELETE request no backend, recebendo como entrada um page [Delete um elemento do banco]
-// page: endpoint utilizado da api. Neste caso o endpoint precisa conter o id do elemento
-// Ex: /produtos/1
-function fetchDelete(page){
-
-  // Define as opções do método fetch.
+/// Faz um DELETE request no backend, recebendo como entrada um page [Delete um elemento do banco]
+/// page: endpoint utilizado na API, contendo o ID do elemento a ser deletado
+/// callback: função de callback a ser chamada com a resposta da API
+function deleteData(page, callback) {
   const options = {
     method: "DELETE",
   };
 
-  console.log(API_URL + page + payload);
   // Realiza o DELETE
-  // OBS: .then() é uma object promise do javacript, para a execucao assincrona de rotinas.
-  fetch(API_URL + page, options)
-    .then((response) =>{
-      if(response.status == 200) // Demonstra sucesso ou falha.
-        alert("Sucesso Delete!")
-      else
-        alert("Falha Delete!")
-    });
+  fetch(API_URL + page, options).then((response) => {
+    callback(response);
+  });
 }
 
-// Faz um PUT request no backend, recebendo como entrada um payload e page [Atualiza um elemento do banco]
-// payload: um array de array que contém um unico elemento data com todos os atributos
-// page: endpoint utilizado da api. Neste caso o endpoint precisa conter o id do elemento
-// Ex: /produtos/1
-function fetchPut(page, payload){
-
-  // Define as opções do método fetch.
+/// Faz um PUT request no backend, recebendo como entrada um payload e a página, atualizando um elemento do banco.
+/// payload: um array de array que contém um único elemento data com todos os atributos
+/// page: endpoint utilizado na API, contendo o ID do elemento a ser atualizado
+/// callback: função de callback a ser chamada com a resposta da API
+function putData(page, payload, callback) {
   const options = {
     method: "PUT",
     headers: {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
     },
-    body: JSON.stringify(payload)
+    body: JSON.stringify(payload),
   };
 
-  // Realiza o POST
-  // OBS: .then() é uma object promise do javacript, para a execucao assincrona de rotinas.
-  fetch(API_URL + page + id, options)
-    .then((response) =>{
-      if(response.status == 200) // Demonstra sucesso ou falha.
-        alert("Sucesso Put!")
-      else
-        alert("Falha Put!")
-    });
+  // Realiza o PUT
+  fetch(API_URL + page + id, options).then((response) => {
+    callback(response);
+  });
 }
 
 /// Popula um elemento HTML de forma iterativa.
