@@ -44,5 +44,12 @@
 
     <script src="../js/main.js"></script>
     <script src="../js/produtos.js"></script>
+    <script>
+      // Adiciona um listener que chama a função de fetchData assim que a página é carregada.
+      window.addEventListener(
+        "load",
+        fetchData("/produtos?populate=*", handleGet)
+      );
+    </script>
   </body>
 </html>

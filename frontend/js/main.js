@@ -91,5 +91,5 @@ function currencyConvert(data) {
     return `R$ ${data},00`;
   }
 
-  return `R$ ${data.replaceAll(".", ",")}`;
+  return `R$ ${String(data).replaceAll(".", ",")}`;
 }
