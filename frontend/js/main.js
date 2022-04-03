@@ -75,8 +75,12 @@ function appendToElement(elementId, data, htmlBuilder) {
 }
 
 /// Retorna a URL completa de uma imagem hospedada no backend.
+/// Caso não haja uma imagem, retorna uma caixa do super mario.
 function imageUrl(image) {
-  return MEDIA_URL + image.data.attributes.url;
+  if (image.data) {
+    return MEDIA_URL + image.data.attributes.url;
+  }
+  return "../imagens/product_default.png";
 }
 
 /// [Função em construção]
