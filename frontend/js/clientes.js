@@ -1,8 +1,10 @@
 /// Constrói um card de produto a partir de um objeto do backend.
-const ClientCardBuilder = function (data) {
+const clientCardBuilder = function (data) {
   const attr = data.attributes;
 
   const html = `
+  <table border="1">
+  <thead>
     <tr>
     <td data-columnName="NOME">${attr.nome)}</td>
     <td data-columnName="E-MAIL">${attr.email)}</td>
@@ -18,7 +20,10 @@ const ClientCardBuilder = function (data) {
       <a href="/api/DeleteCliente"> Deletar</a>
       <a href="clientes/${data.id}">Atualizar</a>
     </td>
-  </tr>`;
+  </tr>
+  </thead>
+  <tbody id="tableBody"></tbody>
+  </table>`;
 
   return html;
 };
@@ -26,5 +31,5 @@ const ClientCardBuilder = function (data) {
 /// Função de callback passada para a função de fetchData.
 /// Recebe os dados da API e repassa para a função que os adiciona na página.
 const handleGet = function (data) {
-  appendToElement("#produtos", data, ClientCardBuilder);
+  appendToElement("#clientes", data, ClientCardBuilder);
 };
