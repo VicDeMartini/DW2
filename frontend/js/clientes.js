@@ -26,5 +26,5 @@ const ClientCardBuilder = function (data) {
 /// Função de callback passada para a função de fetchData.
 /// Recebe os dados da API e repassa para a função que os adiciona na página.
 const handleGet = function (data) {
-  appendToElement("#produtos", data, ClientCardBuilder);
+  appendToElement("#clientes", data, ClientCardBuilder);
 };
