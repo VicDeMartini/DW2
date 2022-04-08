@@ -3,6 +3,8 @@ const clientCardBuilder = function (data) {
   const attr = data.attributes;
 
   const html = `
+  <table border="1">
+  <thead>
     <tr>
     <td data-columnName="NOME">${attr.nome)}</td>
     <td data-columnName="E-MAIL">${attr.email)}</td>
@@ -18,7 +20,10 @@ const clientCardBuilder = function (data) {
       <a href="/api/DeleteCliente"> Deletar</a>
       <a href="clientes/${data.id}">Atualizar</a>
     </td>
-  </tr>`;
+  </tr>
+  </thead>
+  <tbody id="tableBody"></tbody>
+  </table>`;
 
   return html;
 };
