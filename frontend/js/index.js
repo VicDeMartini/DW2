@@ -1,7 +1,7 @@
 const navbarHtml = `
 <div class="navbar">
     <a href="#" onclick="renderIndex()">DW2 Games</a>
-    <a href="compras/RCompras.html">Compras</a>
+    <a href="#" onclick="renderRCompras()">Compras</a>
     <div class="dropdown">
     <button class="dropbtn">
         Produtos

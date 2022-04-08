@@ -30,6 +30,28 @@ const rProdutosHtml = `
 </div>
 `;
 
+/// HTML da página de lista de compras
+const rComprasHtml = `
+<div class="header">
+  <h1>Compras</h1>
+</div>
+
+<div class="table-cliente">
+  <table border="1">
+    <thead>
+      <tr>
+        <th scope="col">NOME</th>
+        <th scope="col">E-MAIL</th>
+        <th scope="col">PRODUTO</th>
+        <th scope="col">PREÇO</th>
+        <th scope="col">DATA</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+</div>
+`;
+
 /// HTML da página de criação de produtos
 const cProdutoHtml = `
 <div class="header">
@@ -113,6 +135,24 @@ const productListBuilder = function (data) {
                   <a href="#" onclick="deleteProduct(${data.id})">Deletar</a>
                   <a href="#" onclick="renderUProduto(${data.id})">Atualizar</a>
               </td>
+          </tr>
+      `;
+
+  return html;
+};
+
+/// Constrói uma linha de uma tabela contendo os dados de um produto
+const compraListBuilder = function (data) {
+  console.log(data.attributes.produtos[0].data);
+  const attr = data.attributes;
+
+  const html = `
+          <tr class="product-row">
+              <td>${attr.nome}</td>
+              <td>${attr.email}</td>
+              <td>${attr.nomeProduto}</td>
+              <td>${currencyConvert(attr.preco)}</td>
+              <td>${attr.dataCompra}</td>
           </tr>
       `;
 
