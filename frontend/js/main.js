@@ -61,7 +61,7 @@ function putData(page, payload, callback) {
   };
 
   // Realiza o PUT
-  fetch(API_URL + page + id, options).then((response) => {
+  fetch(API_URL + page, options).then((response) => {
     callback(response);
   });
 }
