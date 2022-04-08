@@ -11,36 +11,9 @@ const handleRProdutosGet = function (data) {
 };
 
 /// Lida com o Update de um elemento
-const handleUpdate = function (data) {
+const handleProductUpdate = function (data) {
   document.getElementById("form-update").innerHTML = formBuilder(data);
   document.getElementById("form-update").addEventListener("submit", updateProduct);
-};
-
-/// Lida com um POST request
-const handleCreate = function (response) {
-  if (response.status == 200) {
-    alert("Elemento criado!");
-  } else {
-    alert(`[${response.status}] ${response.statusText}`);
-  }
-};
-
-/// Lida com um DELETE request
-const handleDelete = function (response) {
-  if (response.status == 200) {
-    alert("Elemento removido!");
-  } else {
-    alert(`[${response.status}] ${response.statusText}`);
-  }
-};
-
-/// Lida com um PUT request
-const handlePut = function (response) {
-  if (response.status == 200) {
-    alert("Elemento atualizado!");
-  } else {
-    alert(`[${response.status}] ${response.statusText}`);
-  }
 };
 
 /// Cria um produto a partir do formulário de cadastro
@@ -116,7 +89,7 @@ function renderRProdutos() {
 
 /// Renderiza a página de inserção de um novo produto
 function renderCProduto() {
-  window.document.title = "Atualizar roduto";
+  window.document.title = "Novo produto";
   content.innerHTML = cProdutoHtml;
   document
     .getElementById("form-cadastro")
@@ -125,7 +98,7 @@ function renderCProduto() {
 
 /// Renderiza a página de atualização de um produto
 function renderUProduto(id) {
-  window.document.title = "Novo roduto";
+  window.document.title = "Atualizar produto";
   content.innerHTML = uProdutoHtml;
-  fetchData(`/produtos/${id}`, handleUpdate);
+  fetchData(`/produtos/${id}`, handleProductUpdate);
 }

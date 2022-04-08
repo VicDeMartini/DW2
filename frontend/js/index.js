@@ -19,9 +19,8 @@ const navbarHtml = `
         <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-        <a href="clientes/RCliente.html">Lista de clientes</a>
-        <a href="clientes/CCliente.html">Inserir cliente</a>
-        <a href="clientes/UCliente.html">Editar cliente</a>
+        <a href="#" onclick="renderRClientes()">Lista de clientes</a>
+        <a href="#" onclick="renderCCliente()">Inserir cliente</a>
     </div>
     </div>
 </div>
@@ -221,6 +220,29 @@ function renderNavbar() {
   navbar = document.getElementById("navbar");
   navbar.innerHTML = navbarHtml;
 }
+
+/// Lida com um POST request
+const handleCreate = function (response) {
+    if (response.status != 200) {
+      alert(`[${response.status}] ${response.statusText}`);
+    }
+  };
+  
+  /// Lida com um DELETE request
+  const handleDelete = function (response) {
+    if (response.status == 200) {
+      alert("Elemento removido!");
+    } else {
+      alert(`[${response.status}] ${response.statusText}`);
+    }
+  };
+  
+  /// Lida com um PUT request
+  const handlePut = function (response) {
+    if (response.status != 200) {
+      alert(`[${response.status}] ${response.statusText}`);
+    }
+  };
 
 window.addEventListener("load", () => {
   renderNavbar();

@@ -99,7 +99,7 @@ const uProdutoHtml = `
     <h1><strong> Atualizar Produto </strong></h1>
 </div>
 
-<form class="form-produto" id="form-update"></form>
+<form id="form-update"></form>
 `;
 
 /// Constrói um card de produto a partir de um objeto do backend
@@ -143,7 +143,6 @@ const productListBuilder = function (data) {
 
 /// Constrói uma linha de uma tabela contendo os dados de um produto
 const compraListBuilder = function (data) {
-  console.log(data.attributes.produtos[0].data);
   const attr = data.attributes;
 
   const html = `

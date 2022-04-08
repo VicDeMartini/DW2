@@ -1,35 +1,102 @@
-/// Constrói um card de produto a partir de um objeto do backend.
-const clientCardBuilder = function (data) {
-  const attr = data.attributes;
-
-  const html = `
-  <table border="1">
-  <thead>
-    <tr>
-    <td data-columnName="NOME">${attr.nome)}</td>
-    <td data-columnName="E-MAIL">${attr.email)}</td>
-    <td data-columnName="TELEFONE">${attr.telefoje)}</td>
-    <td data-columnName="CEP">${attr.cep)}</td>
-    <td data-columnName="LOGRADOURO">${attr.logradouro)}</td>
-    <td data-columnName="NÚMERO">${attr.numero)}</td>
-    <td data-columnName="BAIRRO">${attr.bairro)}</td>
-    <td data-columnName="CIDADE">${attr.cidade)}</td>
-    <td data-columnName="ESTADO">${attr.estado)}</td>
-    <!-- Link para a pagina que deleta cliente e atualiza cliente-->
-    <td data-columnName="AÇÕES">
-      <a href="/api/DeleteCliente"> Deletar</a>
-      <a href="clientes/${data.id}">Atualizar</a>
-    </td>
-  </tr>
-  </thead>
-  <tbody id="tableBody"></tbody>
-  </table>`;
-
-  return html;
+/// Lida com o Update de um elemento
+const handleClientUpdate = function (data) {
+  document.getElementById("form-update").innerHTML += clienteFormBuilder(data);
+  document.getElementById("Atualizar").addEventListener("click", updateClient);
 };
 
-/// Função de callback passada para a função de fetchData.
-/// Recebe os dados da API e repassa para a função que os adiciona na página.
+/// Lida com um GET request
 const handleGet = function (data) {
-  appendToElement("#clientes", data, ClientCardBuilder);
+  appendToElement("tableBody", data, clientListBuilder);
 };
+
+/// Cria um cliente a partir do formulário de cadastro.
+function createClient(event) {
+  // Previne o comportamento padrão de submit do form
+  event.preventDefault();
+
+  // Cria o objeto de payload para criar um novo cliente no backend
+  const payload = {
+    data: {
+      nome: document.getElementById("nome").value,
+      email: document.getElementById("email").value,
+      telefone: document.getElementById("telefone").value,
+      sexo: document.getElementById("sexo").value,
+      cep: document.getElementById("cep").value,
+      logradouro: document.getElementById("logradouro").value,
+      numero: parseInt(document.getElementById("numero").value),
+      bairro: document.getElementById("bairro").value,
+      cidade: document.getElementById("cidade").value,
+      estado: document.getElementById("estado").value,
+    },
+  };
+
+  // Realiza o post
+  postData("/usuarios", payload, handleCreate);
+
+  // Limpa todos os inputs
+  document.getElementById("nome").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("telefone").value = "";
+  document.getElementById("sexo").selectedIndex = -1;
+  document.getElementById("logradouro").value = "";
+  document.getElementById("numero").value = "";
+  document.getElementById("bairro").value = "";
+  document.getElementById("cidade").value = "";
+  document.getElementById("estado").value = "";
+}
+
+/// Cria um cliente a partir do formulário de cadastro.
+function updateClient(event) {
+  event.preventDefault();
+
+  // Cria o objeto de payload para criar um novo cliente no backend
+  const payload = {
+    data: {
+      id: document.getElementById("productId").value,
+      nome: document.getElementById("nome").value,
+      email: document.getElementById("email").value,
+      telefone: document.getElementById("telefone").value,
+      sexo: document.getElementById("sexo").value,
+      Endereco: {
+        CEP: document.getElementById("cep").value,
+        Logradouro: document.getElementById("logradouro").value,
+        Numero: parseInt(document.getElementById("numero").value),
+        Bairro: document.getElementById("bairro").value,
+        Cidade: document.getElementById("cidade").value,
+        Estado: document.getElementById("estado").value,
+      },
+    },
+  };
+
+  console.log(payload)
+
+  // Realiza o put
+  putData(`/usuarios/${payload.data.id}`, payload, handlePut);
+
+  renderRClientes();
+}
+
+/// Remove um cliente do banco de dados.
+function deleteClient(clientId) {
+  deleteData(`/usuarios/${clientId}`, handleDelete);
+}
+
+function renderRClientes() {
+  window.document.title = "Clientes";
+  content.innerHTML = rClientesHtml;
+  fetchData("/usuarios?populate=*", handleGet);
+}
+
+function renderCCliente() {
+  window.document.title = "Atualizar cliente";
+  content.innerHTML = cClientesHtml;
+  document
+    .getElementById("form-cadastro")
+    .addEventListener("submit", createClient);
+}
+
+function renderUCliente(id) {
+  window.document.title = "Novo cliente";
+  content.innerHTML = uClienteHtml;
+  fetchData(`/usuarios/${id}?populate=*`, handleClientUpdate);
+}
