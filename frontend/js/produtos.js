@@ -95,8 +95,8 @@ async function updateProduct(event) {
 /// Remove um produto do banco de dados.
 async function deleteProduct(productId) {
   if (confirm("Você realmente deseja remover este produto?") == true) {
-    renderRProdutos();
     await deleteData(`/produtos/${productId}`, handleDelete);
+    renderRProdutos();
   }
 }
 
