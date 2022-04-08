@@ -143,15 +143,17 @@ const productListBuilder = function (data) {
 
 /// Constrói uma linha de uma tabela contendo os dados de um produto
 const compraListBuilder = function (data) {
-  const attr = data.attributes;
+  const produto = data.attributes.produtos.data[0].attributes;
+  const usuario = data.attributes.usuario.data.attributes;
+  const compraDate = new Date(data.attributes.createdAt)
 
   const html = `
           <tr class="product-row">
-              <td>${attr.nome}</td>
-              <td>${attr.email}</td>
-              <td>${attr.nomeProduto}</td>
-              <td>${currencyConvert(attr.preco)}</td>
-              <td>${attr.dataCompra}</td>
+              <td>${usuario.nome}</td>
+              <td>${usuario.email}</td>
+              <td>${produto.nome}</td>
+              <td>${currencyConvert(produto.preco)}</td>
+              <td>${compraDate.getDay() + "-" + compraDate.getMonth() + "-" + compraDate.getFullYear()}</td>
           </tr>
       `;
 
