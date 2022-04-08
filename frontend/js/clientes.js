@@ -1,5 +1,5 @@
 /// Constrói um card de produto a partir de um objeto do backend.
-const ClientCardBuilder = function (data) {
+const clientCardBuilder = function (data) {
   const attr = data.attributes;
 
   const html = `

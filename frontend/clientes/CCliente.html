@@ -1,117 +1,118 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <link rel="stylesheet" type="text/css" href="../CSS/main.css" />
-    <link rel="stylesheet" type="text/css" href="../CSS/clientes.css" />
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Novo cliente</title>
-  </head>
 
-  <body>
-    <!-- cabecalho da pagina -->
+<head>
+  <link rel="stylesheet" type="text/css" href="../CSS/main.css" />
+  <link rel="stylesheet" type="text/css" href="../CSS/clientes.css" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Novo cliente</title>
+</head>
 
-    <div class="navbar">
-      <a href="../index.html">DW2 Games</a>
-      <a href="../compras/RCompras.html">Compras</a>
-      <div class="dropdown">
-        <button class="dropbtn">
-          Produtos
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="../produtos/Produtos.html">Catálogo de produtos</a>
-          <a href="../produtos/RProduto.html">Lista de produtos</a>
-          <a href="../produtos/CProduto.html">Inserir produto</a>
-          <a href="../produtos/UProduto.html">Editar produto</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <button class="dropbtn">
-          Clientes
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="./RCliente.html">Lista de clientes</a>
-          <a href="./CCliente.html">Inserir cliente</a>
-          <a href="./UCliente.html">Editar cliente</a>
-        </div>
+<body>
+  <!-- cabecalho da pagina -->
+
+  <div class="navbar">
+    <a href="../index.html">DW2 Games</a>
+    <a href="../compras/RCompras.html">Compras</a>
+    <div class="dropdown">
+      <button class="dropbtn">
+        Produtos
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="../produtos/Produtos.html">Catálogo de produtos</a>
+        <a href="../produtos/RProduto.html">Lista de produtos</a>
+        <a href="../produtos/CProduto.html">Inserir produto</a>
+        <a href="../produtos/UProduto.html">Editar produto</a>
       </div>
     </div>
-
-    <div class="header">
-      <h1><strong> Criar Novo Cliente </strong></h1>
+    <div class="dropdown">
+      <button class="dropbtn">
+        Clientes
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="./RCliente.html">Lista de clientes</a>
+        <a href="./CCliente.html">Inserir cliente</a>
+        <a href="./UCliente.html">Editar cliente</a>
+      </div>
     </div>
+  </div>
 
-    <!-- Forms para cadastros -->
-    <div class="form-cliente">
-      <form action="api/cadastroCliente" method="post">
-        <label for="nome">Nome:</label>
-        <input required type="text" id="nome" name="nome" />
-        <br />
+  <div class="header">
+    <h1><strong> Criar Novo Cliente </strong></h1>
+  </div>
 
-        <label for="email">E-mail:</label>
-        <input required type="text" id="email" name="email" />
-        <br />
+  <!-- Forms para cadastros -->
+  <div>
+    <form class="form-cliente" id="form-cadastro">
+      <label for="nome">Nome:</label>
+      <input required type="text" id="nome" name="nome" />
+      <br />
 
-        <label for="senha">Senha:</label>
-        <!-- Type password para nao mostrar a senha -->
-        <input required type="password" id="senha" name="senha" />
-        <br />
+      <label for="email">E-mail:</label>
+      <input required type="text" id="email" name="email" />
+      <br />
 
-        <label for="cpf">CPF:</label>
-        <input required type="text" id="cpf" name="cpf" />
-        <br />
+      <label for="senha">Senha:</label>
+      <!-- Type password para nao mostrar a senha -->
+      <input required type="password" id="senha" name="senha" />
+      <br />
 
-        <label for="telefone">Telefone:</label>
-        <input required type="text" id="telefone" name="telefone" />
-        <br />
+      <label for="cpf">CPF:</label>
+      <input required type="text" id="cpf" name="cpf" />
+      <br />
 
-        <label for="sexo">Sexo:</label>
-        <!-- Drop down -->
-        <select id="sexo" name="sexo">
-          <option value="masculino">Masculino</option>
-          <option value="feminino">Feminino</option>
-          <option value="nao-binario">Não Binário</option>
-          <option value="prefere-nao-dizer">Prefiro Não Dizer</option>
-        </select>
-        <br />
+      <label for="telefone">Telefone:</label>
+      <input required type="text" id="telefone" name="telefone" />
+      <br />
 
-        <label for="cep">CEP:</label>
-        <input required type="text" id="cep" name="cep" />
-        <br />
+      <label for="sexo">Sexo:</label>
+      <!-- Drop down -->
+      <select id="sexo" name="sexo">
+        <option value="masculino">Masculino</option>
+        <option value="feminino">Feminino</option>
+        <option value="nao-binario">Não Binário</option>
+        <option value="prefere-nao-dizer">Prefiro Não Dizer</option>
+      </select>
+      <br />
 
-        <label for="logradouro">Logradouro:</label>
-        <input required type="text" id="logradouro" name="logradouro" />
-        <br />
+      <label for="cep">CEP:</label>
+      <input required type="text" id="cep" name="cep" />
+      <br />
 
-        <label for="numero">Número::</label>
-        <input required type="text" id="numero" name="numero" />
-        <br />
+      <label for="logradouro">Logradouro:</label>
+      <input required type="text" id="logradouro" name="logradouro" />
+      <br />
 
-        <label for="bairro">Bairro:</label>
-        <input required type="text" id="bairro" name="bairro" />
-        <br />
+      <label for="numero">Número::</label>
+      <input required type="text" id="numero" name="numero" />
+      <br />
 
-        <label for="cidade">Cidade:</label>
-        <input required type="text" id="cidade" name="cidade" />
-        <br />
+      <label for="bairro">Bairro:</label>
+      <input required type="text" id="bairro" name="bairro" />
+      <br />
 
-        <label for="estado">Estado:</label>
-        <input required type="text" id="estado" name="estado" />
-        <br />
+      <label for="cidade">Cidade:</label>
+      <input required type="text" id="cidade" name="cidade" />
+      <br />
 
-        <input class="button" type="submit" id="Cadastrar" />
-      </form>
-      <script src="../js/main.js"></script>
-    <script src="../js/produtos.js"></script>
+      <label for="estado">Estado:</label>
+      <input required type="text" id="estado" name="estado" />
+      <br />
+
+      <input class="button" type="submit" />
+    </form>
+    <script src="../js/main.js"></script>
+    <script src="../js/clientes_admin.js"></script>
     <script>
       // Adiciona um listener no botão de cadastro
       document
         .getElementById("form-cadastro")
-        .addEventListener("submit", createProduct);
+        .addEventListener("submit", createClient);
     </script>
-    </div>
-  </body>
+</body>
+
 </html>
