@@ -18,7 +18,7 @@ function fetchData(page, callback) {
 /// payload: um objeto do tipo a ser criado contendo todos os seus atributos
 /// page: endpoint utilizado na API
 /// callback: função de callback a ser chamada com a resposta da API
-function postData(page, payload, callback) {
+async function postData(page, payload, callback) {
   const options = {
     method: "POST",
     headers: {
@@ -28,30 +28,28 @@ function postData(page, payload, callback) {
   };
 
   // Realiza o POST
-  fetch(API_URL + page, options).then((response) => {
-    callback(response);
-  });
+  response = await fetch(API_URL + page, options);
+  callback(response);
 }
 
 /// Faz um DELETE request no backend, recebendo como entrada um page [Delete um elemento do banco]
 /// page: endpoint utilizado na API, contendo o ID do elemento a ser deletado
 /// callback: função de callback a ser chamada com a resposta da API
-function deleteData(page, callback) {
+async function deleteData(page, callback) {
   const options = {
     method: "DELETE",
   };
 
   // Realiza o DELETE
-  fetch(API_URL + page, options).then((response) => {
-    callback(response);
-  });
+  response = await fetch(API_URL + page, options);
+  callback(response);
 }
 
 /// Faz um PUT request no backend, recebendo como entrada um payload e a página, atualizando um elemento do banco.
 /// payload: um array de array que contém um único elemento data com todos os atributos
 /// page: endpoint utilizado na API, contendo o ID do elemento a ser atualizado
 /// callback: função de callback a ser chamada com a resposta da API
-function putData(page, payload, callback) {
+async function putData(page, payload, callback) {
   const options = {
     method: "PUT",
     headers: {
@@ -61,9 +59,8 @@ function putData(page, payload, callback) {
   };
 
   // Realiza o PUT
-  fetch(API_URL + page, options).then((response) => {
-    callback(response);
-  });
+  response = await fetch(API_URL + page, options);
+  callback(response);
 }
 
 /// Popula um elemento HTML de forma iterativa.
@@ -80,7 +77,7 @@ function imageUrl(image) {
   if (image.data) {
     return MEDIA_URL + image.data.attributes.url;
   }
-  return "../imagens/product_default.png";
+  return "imagens/product_default.png";
 }
 
 /// [Função em construção]
@@ -96,4 +93,9 @@ function currencyConvert(data) {
   }
 
   return `R$ ${String(data).replaceAll(".", ",")}`;
+}
+
+/// Função equivalente à sleep, de forma gambiarrenta
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
 }
