@@ -92,7 +92,7 @@ const productCardBuilder = function (data) {
       </div>
       <div class="description">${mdConvert(attr.descricao)}</div>
         <div class="price">${currencyConvert(attr.preco)}</div>
-        <div class="buy-link"><a href="produto/${data.id}">Comprar</a></div>
+        <div class="buy-link"><a href="#" onclick="createCompra(${data.id})">Comprar</a></div>
     </div>`;
 
   return html;
