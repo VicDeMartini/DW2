@@ -4,15 +4,15 @@ const clientListBuilder = function (data) {
   
     const html = `
       <tr>
-      <td data-columnName="NOME">${attr.nome)}</td>
-      <td data-columnName="E-MAIL">${attr.email)}</td>
-      <td data-columnName="TELEFONE">${attr.telefone)}</td>
-      <td data-columnName="CEP">${attr.cep)}</td>
-      <td data-columnName="LOGRADOURO">${attr.logradouro)}</td>
-      <td data-columnName="NÚMERO">${attr.numero)}</td>
-      <td data-columnName="BAIRRO">${attr.bairro)}</td>
-      <td data-columnName="CIDADE">${attr.cidade)}</td>
-      <td data-columnName="ESTADO">${attr.estado)}</td>
+      <td data-columnName="NOME">${attr.nome}</td>
+      <td data-columnName="E-MAIL">${attr.email}</td>
+      <td data-columnName="TELEFONE">${attr.telefone}</td>
+      <td data-columnName="CEP">${attr.cep}</td>
+      <td data-columnName="LOGRADOURO">${attr.logradouro}</td>
+      <td data-columnName="NÚMERO">${attr.numero}</td>
+      <td data-columnName="BAIRRO">${attr.bairro}</td>
+      <td data-columnName="CIDADE">${attr.cidade}</td>
+      <td data-columnName="ESTADO">${attr.estado}</td>
       <!-- Link para a pagina que deleta cliente e atualiza cliente-->
       <td data-columnName="AÇÕES">
       <a href="#" onclick="deleteClient(${data.id})">Deletar</a>
